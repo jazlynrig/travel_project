@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  //-   h1= title
+  //-   p Welcome to #{title}
+
+  .banner
+    .herotext
+      br
+      h1 Vacation Time
+      br
+      br
+      br
+      br
+      h2 Are you ready for some fun, check out our current packages
+
+
+   
+  .grid-container
+    .intro.p-lr
+      h3 We offer you the best travel packages at the lowest cost
+      //- Random Greeting 
+      h3 #{greeting}
+      .galleryIntro
+        h2 Gallery
+      .flex-container
+        figure.flex-item
+          img(src='images/thai1.jpg' alt='thai')
+          figcaption Thailand starting from $4000
+        figure.flex-item
+          img(src='images/thai2.jpg' alt='thai2')
+          figcaption Thailand starting from $2500
+        figure.flex-item
+          img(src='images/mald1.jpg' alt='mald1')
+          figcaption Maldives starting from $3000
+        figure.flex-item
+          img(src='images/mald2.jpg' alt='mald2')
+          figcaption Maldives starting from $3500
+        figure.flex-item
+          img(src='images/gre1.jpg' alt='gre1')
+          figcaption Greece starting from $3500
+        figure.flex-item
+          img(src='images/gre2.jpg' alt='gre2')
+          figcaption Greece starting from $4500
+      .art.p-lr
+        h2 Article
+        p Copyright &copy; 2021

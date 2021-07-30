@@ -1,0 +1,56 @@
+extends layout
+
+block content
+
+  doctype html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Contact
+    link(rel='stylesheet' type='text/css' href='stylesheets/styles.css')
+
+  //- banner
+  .banner
+    .herotext
+      br
+      h1 Need help
+      br
+      br
+      br
+      br
+      h2 Please contact us any time
+
+  .contact-grid-container
+    .intro.p-lr
+      h2 Contact Us
+      p
+    //- Contact form
+    .contactform.p-lr
+      h3 For urgent inquiries call: 1-800-helpus1
+      h3 Fill out the form in case you have any other question
+      form(action='/contact' method="post")
+        p
+          label(for='fname') First Name 
+          input#fname(type='text' name='firstname' placeholder='Your name..' value=formdata && contact.firstname)
+        p
+          label(for='lname') Last Name 
+          input#lname(type='text' name='lastname' placeholder='Your last name..' value=formdata && contact.lasttname)
+        p
+          label(for='emailadd') Email 
+          input#emailadd(type='email' name='mail' placeholder='Email address' required='' value=formdata && contact.mail)
+        p
+          label(for='comment') Comment or Question 
+        textarea#comment(name='comment' placeholder='Comment...' rows='5' value=formdata && contact.comment)
+        p
+          label
+            input(type='checkbox' name='lab')
+            |  Add me to your Newsletter
+        input.roundbtn(type='submit' value='Submit')
+  //- map
+  .map
+    figure
+      img(src='images/caribbean-beach.jpg' alt='beach')
+      figcaption Contact us 
+
+  footer  
+    p Copyright &copy; 2021

@@ -1,0 +1,52 @@
+extends layout
+
+block content
+
+  doctype html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Gallery
+    link(rel='stylesheet' type='text/css' href='stylesheets/styles.css')
+
+  //- banner
+  .banner
+    .herotext
+      br
+      h1 Log-in
+      br
+      br
+      br
+      br
+      h2 to explore even more exciting options
+
+  .contact-grid-container
+    .intro.p-lr
+      h2 Login/Register
+      p
+    //- Contact form
+    .contactform.p-lr
+      h3 Register or login to your account
+      //- p
+      //-   a(href='index')
+      //-     | Please click here to Register if you dont have an
+      //-     | account
+      //- p
+      //-   a(href='index.html') Please click here if you forgot your password
+      //- br
+      form(action='/ulogin' method='post')
+        label(for='username') Username 
+        input#username(type='text' name='username' placeholder='Username..' value=formdata && login.username)
+        label(for='password') Password
+        input#password(type='password' name='password' placeholder='Password..' value=formdata && login.password)
+        input.roundbtn(type='submit' value='Submit')
+      a.float-end.bg-secondary(href="/register") 
+            h5 Register
+  //- map
+  .map
+    figure
+      img(src='images/beach1.jpg' alt='beach')
+      figcaption Contact us 
+
+  footer
+    p Copyright &copy; 2021
